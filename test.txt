@@ -1,0 +1,5 @@
+I think I finally figured it.
+I ran the 
+	gh auth login
+command, logged in, added the SSH key. Edited the global author, and it finally worked.
+About to commit and push this.  I know it will work but must keep testing.
