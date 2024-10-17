@@ -1,0 +1,19 @@
+What is the difference between running:
+	git branch <branch name>
+and:
+	git checkout -B <branch name>
+huh?
+
+Well, by using the latter you move to the new branch, rather than merely creating it and keep working on your current branch.
+Cool stuff, right?
+
+Verify you've moved branches by running:
+	git branch
+and peep the name of the branch:)
+
+NOTE:  This branch, and indeed all branches, exist in isolation even if you push code to the main repo.  All changes need to be
+merged back to the main branch.
+
+Thus the need for a pull request.  The pull request is to obtain a peer review of changed made to the branch, thus validating
+that the changes are correct.  This allows for when working with teams with standards to accept pulls that meet the criteria
+establish in unit testings, etc.
