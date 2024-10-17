@@ -1,0 +1,52 @@
+What is the difference between running:
+	git branch <branch name>
+and:
+	git checkout -B <branch name>
+huh?
+
+Well, by using the latter you move to the new branch, rather than merely creating it and keep working on your current branch.
+Cool stuff, right?
+
+Verify you've moved branches by running:
+	git branch
+and peep the name of the branch:)
+
+NOTE:  This branch, and indeed all branches, exist in isolation even if you push code to the main repo.  All changes need to be
+merged back to the main branch.
+
+Thus the need for a pull request.  The pull request is to obtain a peer review of changed made to the branch, thus validating
+that the changes are correct.  This allows for when working with teams with standards to accept pulls that meet the criteria
+establish in unit testings, etc.
+
+I just edited my SSH key again, because it gets annoying to have to type all my info over and over again. But I need to test that it works
+
+So I couldn't add a new branch to my git, I kept being told HTTPS authentication was discontinued, or whatever.
+
+So I ran the command:
+	git remote -v
+
+To see what was up:
+mouserat@Skynet:~/Projects/git-tutorial1/my-first-repo$ git remote -v
+origin	https://github.com/Jona-Val/my-first-repo.git (fetch)
+origin	https://github.com/Jona-Val/my-first-repo.git (push)
+mouserat@Skynet:~/Projects/git-tutorial1/my-first-repo$ git remote set-url origin git@github.com:jona-val/my-first-repo.git
+
+The last command was to set to remote to use SSH, which I had set up already.
+First, you generate a key:
+ssh-keygen -t ed25519 -C <email>
+then 
+	eval "$(ssh-agent -s)"
+
+then add it to the agent:
+
+	ssh-add ~/.ssh/id_ed25519
+
+Then copy to clipboard:
+	cat ~/.ssh/id_ed25519.pub
+
+Then you go to github and go to setting > SSH and GPG keys > New SSH Key
+and you add the info
+then you test the connection 
+	ssh -T git@github.com
+And Ta Dah! You've been authenticated! You shouldn't be asked to use your username and password anymore, well after you do the previous steps to this
+
