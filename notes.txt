@@ -17,3 +17,5 @@ merged back to the main branch.
 Thus the need for a pull request.  The pull request is to obtain a peer review of changed made to the branch, thus validating
 that the changes are correct.  This allows for when working with teams with standards to accept pulls that meet the criteria
 establish in unit testings, etc.
+
+I just edited my SSH key again, because it gets annoying to have to type all my info over and over again. But I need to test that it works.
