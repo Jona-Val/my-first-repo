@@ -1,3 +1,0 @@
-Why are there so many tests?
-
-Well, I kinda forgot to login so the commits were being attributed to my computer, rather than my account.
